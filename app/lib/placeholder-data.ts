@@ -1,9 +1,10 @@
-// This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
+// Questo file contiene dati placeholder che sostituirai con dati reali nel capitolo "Data Fetching":
 // https://nextjs.org/learn/dashboard-app/fetching-data
 const users = [
   {
     id: '410544b2-4001-4271-9855-fec4b6a6442a',
-    name: 'User',
+    // Tradotto: 'User' -> 'Utente'
+    name: 'Utente', 
     email: 'user@nextmail.com',
     password: '123456',
   },
@@ -130,18 +131,19 @@ const invoices = [
 ];
 
 const revenue = [
-  { month: 'Jan', revenue: 2000 },
+  // Traduzione dei nomi dei mesi da EN a IT
+  { month: 'Gen', revenue: 2000 },
   { month: 'Feb', revenue: 1800 },
   { month: 'Mar', revenue: 2200 },
   { month: 'Apr', revenue: 2500 },
-  { month: 'May', revenue: 2300 },
-  { month: 'Jun', revenue: 3200 },
-  { month: 'Jul', revenue: 3500 },
-  { month: 'Aug', revenue: 3700 },
-  { month: 'Sep', revenue: 2500 },
-  { month: 'Oct', revenue: 2800 },
+  { month: 'Mag', revenue: 2300 },
+  { month: 'Giu', revenue: 3200 },
+  { month: 'Lug', revenue: 3500 },
+  { month: 'Ago', revenue: 3700 },
+  { month: 'Set', revenue: 2500 },
+  { month: 'Ott', revenue: 2800 },
   { month: 'Nov', revenue: 3000 },
-  { month: 'Dec', revenue: 4800 },
+  { month: 'Dic', revenue: 4800 },
 ];
 
 export { users, customers, invoices, revenue };

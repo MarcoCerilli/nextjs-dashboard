@@ -31,16 +31,8 @@ export default function Page() {
           {/* Paragrafo di benvenuto con font personalizzato e stili responsivi */}
           <p
             className={`${lusitana.className} text-xl text-gray-800 md:text-3xl md:leading-normal`}
-            // ⭐ Traduzione in italiano
           >
-            <strong>Benvenuti in Acme.</strong> Questa è l&apos;applicazione di
-            esempio per il<br></br>
-            {/* Link al corso Next.js Learn */}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
-              
-              Corso Next.js Learn
-            </a>
-            , offerta da Vercel.
+            <strong className="text-blue-500">Benvenuti in Acme.</strong>
           </p>
 
           {/* Pulsante/Link per il Login */}
