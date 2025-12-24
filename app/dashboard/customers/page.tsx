@@ -3,6 +3,7 @@
 import Table from "@/app/ui/customers/table";
 import { fetchFilteredCustomers } from "@/app/lib/data"; // Funzione che recupera i dati
 import { lusitana } from "@/app/ui/fonts";
+import { Suspense } from "react";
 
 // La pagina sarà statica (Server Component) per il rendering iniziale
 export default async function Page({
@@ -17,14 +18,17 @@ export default async function Page({
   // Chiama la funzione per recuperare i clienti
   const customers = await fetchFilteredCustomers(query);
 
-  return (
+    return (
+      
     <div className="w-full">
       <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
         Clienti
       </h1>
 
-      {/* Search e Table Wrapper (come in /invoices) */}
-      <Table customers={customers} />
+            {/* Search e Table Wrapper (come in /invoices) */}
+            <Suspense key={query} fallback={<div>Caricamento...</div>}>
+                <Table customers={customers} />
+            </Suspense>
     </div>
   );
 }
