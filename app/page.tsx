@@ -37,10 +37,10 @@ export default function Page() {
 
           {/* Pulsante/Link per il Login */}
           <Link
-            href="/login"
+            href="/dashboard"
             className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
           >
-            <span>Accedi</span> {/* Testo del pulsante */}
+            <span>Vai alla Dashboard</span> {/* Testo del pulsante */}
             <ArrowRightIcon className="w-5 md:w-6" /> {/* Icona freccia */}
           </Link>
         </div>

@@ -9,9 +9,10 @@ export const authConfig = {
       const isLoggedIn = !!auth?.user;
       const isOnDashboard = nextUrl.pathname.startsWith("/dashboard");
       if (isOnDashboard) {
-        if (isLoggedIn) return true;
-        return false; //Reindirizziamo al login
-      } else if (isLoggedIn) {
+        return true; // Bypass authentication for portfolio visitors
+      }
+      // Se si cerca di accedere al login, reindirizza direttamente alla dashboard
+      if (nextUrl.pathname.startsWith("/login")) {
         return Response.redirect(new URL("/dashboard", nextUrl));
       }
       return true;
